@@ -1,11 +1,8 @@
 {
   "name": "check-engines-instant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run check-engines instantly, print errors and exit process if test failed.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "check-engines",
     "version-check"

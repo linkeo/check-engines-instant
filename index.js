@@ -6,19 +6,12 @@ var color = require('cli-color');
 var checkEngines = require('check-engines');
 
 module.exports = function(exitCode, callback) {
-  var exit = true;
   if (typeof exitCode === 'function') {
     callback = exitCode;
     exitCode = undefined;
   }
-  if (exitCode === false) {
-    exit = false;
-  }
   if (typeof exitCode !== 'number') {
-    exitCode = 1;
-  }
-  if (typeof callback !== 'function') {
-    callback = function() {};
+    exitCode = -1;
   }
   checkEngines(function(err) {
     if (err) {
@@ -30,8 +23,12 @@ module.exports = function(exitCode, callback) {
           );
         }
       });
+      if (typeof callback !== 'function') {
+        process.exit(exitCode);
+      }
+    }
+    if (typeof callback === 'function') {
       callback(err);
-      exit && process.exit(exitCode);
     }
   });
 };
