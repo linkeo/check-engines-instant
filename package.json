@@ -1,0 +1,22 @@
+{
+  "name": "check-engines-instant",
+  "version": "1.0.0",
+  "description": "Run check-engines instantly, print errors and exit process if test failed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "check-engines",
+    "version-check"
+  ],
+  "author": "linkeo",
+  "license": "ISC",
+  "dependencies": {
+    "check-engines": "^1.4.0",
+    "cli-color": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
