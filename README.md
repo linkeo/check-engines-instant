@@ -33,4 +33,6 @@ require('check-engines-instant')(function(err) {});
 // ...
 ```
 
-For more informations, see [krupple/check-engines](https://github.com/kruppel/check-engines)
+For more informations about check-engines, see [krupple/check-engines](https://github.com/kruppel/check-engines)
+
+For more informations about npm engines, see [npm docs about package.json](https://docs.npmjs.com/files/package.json#engines)
